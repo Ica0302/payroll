@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="payroll.css">
+  <title>Payroll Display</title>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Payroll Summary</h1>
+
+    <div class="row"><strong>ID</strong> <span id="rId"></span></div>
+    <div class="row"><strong>Name:</strong> <span id="rName"></span></div>
+    <div class="row"><strong>Position:</strong> <span id="rPosition"></span></div>
+    <div class="row"><strong>Rate:</strong> <span id="rRate"></span></div>
+    <div class="row"><strong>Days:</strong> <span id="rDays"></span></div>
+    <div class="row"><strong>Gross Pay:</strong> <span id="rGross"></span></div>
+    <hr>
+    <div class="row"><span>SSS (5%):</span> <span id="rSSS"></span></div>
+    <div class="row"><span>Pag-IBIG (3%):</span> <span id="rPagibig"></span></div>
+    <div class="row"><span>PhilHealth (2%):</span> <span id="rPhilhealth"></span></div>
+    <div class="row"><span>Tax (5%):</span> <span id="rTax"></span></div>
+    <div class="row total"><span>Total Deduction:</span> <span id="rTotal"></span></div>
+    <div class="row total"><span>Net Pay:</span> <span id="rNet"></span></div>
+
+    <a href="payrolls.html"><button onclick="back()">Back to Form</button></a>
+  </div>
+
+  <script src="payroll.js"></script>
+
+</body>
+</html>
