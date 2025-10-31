@@ -6,13 +6,11 @@ function compute() {
   let rate = Number(document.getElementById("rate").value);
   let days = Number(document.getElementById("days").value);
 
-  // ✅ Validation
   if (!id || !name || !position || rate <= 0 || days <= 0) {
     alert("Please fill out all fields correctly!");
     return;
   }
 
-  // ✅ Computation
   let gross = rate * days;
   let sss = gross * 0.05;
   let pagibig = gross * 0.03;
@@ -21,7 +19,7 @@ function compute() {
   let totalDeduction = sss + pagibig + philhealth + tax;
   let net = gross - totalDeduction;
 
-  // ✅ Save values to localStorage
+
   localStorage.setItem("id", id);
   localStorage.setItem("name", name);
   localStorage.setItem("position", position);
@@ -35,13 +33,10 @@ function compute() {
   localStorage.setItem("totalDeduction", totalDeduction);
   localStorage.setItem("net", net);
 
-  // ✅ Redirect to display page
   window.location.href = "payroll-display.html";
 }
 
 
-
-  // ✅ Retrieve and display stored payroll data
 document.getElementById("rId").textContent = localStorage.getItem("id");
 document.getElementById("rName").textContent = localStorage.getItem("name");
 document.getElementById("rPosition").textContent = localStorage.getItem("position");
@@ -55,8 +50,9 @@ document.getElementById("rTax").textContent = "₱" + Number(localStorage.getIte
 document.getElementById("rTotal").textContent = "₱" + Number(localStorage.getItem("totalDeduction")).toFixed(2);
 document.getElementById("rNet").textContent = "₱" + Number(localStorage.getItem("net")).toFixed(2);
 
-// ✅ Go back to form page
+
 function back() {
   window.location.href = "payroll-form.html";
 }
+
 
